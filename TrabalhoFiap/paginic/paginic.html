@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="paginc.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Home</title>
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+        <div class="logo_name">Health Track</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+       <a href="#">
+         <i class='bx bx-user' ></i>
+         <span class="links_name">Informação Corporal</span>
+       </a>
+       <span class="tooltip">Informações Do Usuário</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-heart' ></i>
+         <span class="links_name">Exercícios</span>
+       </a>
+       <span class="tooltip">Exercícios</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-food-menu' ></i>
+         <span class="links_name">Alimentação</span>
+       </a>
+       <span class="tooltip">Alimentação</span>
+     </li>
+     <li>
+        <a href="../inicio/inicio.html">
+          <i class='bx bx-log-out' ></i>
+          <span class="links_name">Sair</span>
+        </a>
+        <span class="tooltip">Sair</span>
+      </li>
+    </ul>
+  </div>
+  
+  <div class="register_container">
+
+    <h1 class="register_tittle">INFORMAÇÕES DO USUÁRIO</h1>
+
+    <form class="register_form">
+ 
+      <input class="register_input" type="number" placeholder="Peso">
+      <span class="register_input-border"></span>
+
+      <input class="register_input" type="number" placeholder="Altura">
+      <span class="register_input-border"></span>
+
+
+      <button class="register_submit">Salvar</button>
+      
+
+    </form>
+
+  </div>
+  
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();
+  });
+
+
+  </script>
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+</body>
+</html>
